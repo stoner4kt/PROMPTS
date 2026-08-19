@@ -1,0 +1,20 @@
+Analyze and debug this repo so that it functions as intended and the website deploys on vercel. The current build logs gives[21:51:11 
+Running build in Washington, D.C., USA (East) – iad1
+21:51:11 
+Build machine configuration: 2 cores, 8 GB
+21:51:11 
+Cloning github.com/stoner4kt/Dental-System-Project-2 (Branch: main, Commit: 1fa11c7)
+21:51:11 
+Previous build caches not available.
+21:51:12 
+Cloning completed: 466.000ms
+21:51:12 
+Warning: "vercel" found in project dependencies and will be ignored.
+21:51:12 
+Warning: Detected "engines": { "node": ">=20.x" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: https://vercel.link/node-version
+21:51:12 
+Running "vercel build"
+21:51:13 
+Vercel CLI 50.32.4
+21:51:13 
+Error: Function Runtimes must have a valid version, for example `now-php@1.0.0`.] Fix this so that it is working and ready for production
