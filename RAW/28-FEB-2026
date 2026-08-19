@@ -1,0 +1,218 @@
+You are an expert full-stack developer specializing in vanilla HTML5, CSS3, and ES6+ JavaScript, with specific experience in mobile-first development using SPCK Editor on Android. You understand the constraints of phone-based development: no build tools, no npm, no frameworks, minimal dependencies, and Git-based deployment workflows.
+
+Generate a complete, deployable MVP web application called "SpotAI" with the following specifications:
+
+═══════════════════════════════════════════════════════════════════
+PROJECT IDENTITY
+═══════════════════════════════════════════════════════════════════
+
+Name: SpotAI
+Tagline: "Train your eyes: Learn to spot AI fakes before they fool you."
+Mission: Teach human visual literacy for detecting AI-generated images/videos through interactive education, not black-box detection tools.
+
+Target Users: General public (18-45), tech-curious beginners, social media users, parents, journalists, students. Treat users as adults—educational, not moralizing.
+
+═══════════════════════════════════════════════════════════════════
+CORE CONSTRAINTS (CRITICAL)
+═══════════════════════════════════════════════════════════════════
+
+1. TECH STACK: Vanilla HTML5, CSS3, ES6+ JavaScript ONLY
+   - NO React, Vue, Angular, or other frameworks
+   - NO npm, webpack, vite, or build tools
+   - NO Tailwind or CSS frameworks (write raw CSS)
+   - Single-page application (SPA) feel using section show/hide
+
+2. DEVELOPMENT ENVIRONMENT: SPCK Editor on Android
+   - Must work perfectly in SPCK's live preview
+   - File structure must be SPCK-friendly
+   - Git integration must be straightforward (init, commit, push)
+
+3. ZERO LOCAL ASSETS: All images/videos loaded via external URLs
+   - Real images: Unsplash, Pexels, Pixabay (CC0)
+   - AI images: Perchance AI, Craiyon, ImgBB-hosted generations
+   - Format: https://images.unsplash.com/photo-xxx?w=800&q=80
+   - All images must use loading="lazy" and descriptive alt text
+
+4. DEPLOYMENT: GitHub → Vercel (preferred) or Netlify
+   - Static site, no build command
+   - Auto-deploy on git push
+   - Must be <2s initial load time
+
+═══════════════════════════════════════════════════════════════════
+FILE STRUCTURE
+═══════════════════════════════════════════════════════════════════
+
+spotai/
+├── index.html          # Single file containing all sections
+├── css/
+│   └── style.css       # Complete mobile-first stylesheet
+├── js/
+│   └── app.js          # All JavaScript logic
+└── .gitignore          # Standard ignore file
+
+NO subfolders for images. NO node_modules. Keep it flat and simple.
+
+═══════════════════════════════════════════════════════════════════
+FEATURES TO IMPLEMENT (MVP)
+═══════════════════════════════════════════════════════════════════
+
+SECTION 1: LANDING/HOME
+- Hero with app name, tagline, and 3 CTAs: "Start Learning", "Take Quiz", "Compare Images"
+- Brief value prop: "AI detectors fail. Your eyes shouldn't."
+- Preview teaser: One side-by-side comparison (external URLs)
+- Mobile-optimized: Large touch targets, readable fonts (16px+)
+
+SECTION 2: TUTORIAL MODULES (5 modules, single page with tabs/accordion)
+Each module includes:
+- Title and 2-3 sentence explanation
+- 3-4 example pairs (real vs AI) using external URLs
+- Interactive "Spot the Fake" mini-quiz within each module
+- Click-to-reveal explanations
+
+Module Topics:
+1. HANDS & FINGERS: Extra fingers, fused fingers, anatomical impossibilities
+2. EYES & SYMMETRY: Mismatched irises, impossible reflections, asymmetrical faces
+3. LIGHTING & SHADOWS: Inconsistent light sources, shadows going wrong directions
+4. TEXT & LOGIC: Gibberish text, impossible signs, nonsensical objects
+5. BACKGROUNDS: Blurry artifacts, repeating patterns, impossible architecture
+
+SECTION 3: SIDE-BY-SIDE COMPARATOR
+- Grid of 12 image pairs (6 real, 6 AI from external URLs)
+- Click image to expand/zoom (CSS modal, no external libraries)
+- Toggle button to reveal which is AI and why
+- Filter: "Show All", "Real Only", "AI Only"
+
+SECTION 4: MASTER QUIZ
+- 15 questions (external image URLs)
+- Question format: Image displayed, "Real" or "AI?" buttons
+- Immediate feedback: Green/red highlight + explanation text
+- Score tracking: Current score and progress (e.g., "Question 5/15")
+- localStorage persistence: Save progress if page refreshes
+- Completion screen: Final score, retry button, share option (copy URL)
+
+SECTION 5: ABOUT/RESOURCES
+- Why this matters (brief, non-preachy)
+- How to stay updated
+- Disclaimer: "AI evolves—no method is foolproof"
+- Link to GitHub repo
+
+═══════════════════════════════════════════════════════════════════
+TECHNICAL REQUIREMENTS
+═══════════════════════════════════════════════════════════════════
+
+CSS SPECIFICATIONS:
+- Mobile-first media queries (base styles mobile, min-width for desktop)
+- CSS custom properties (variables) for colors: --primary, --bg, --text, --accent
+- Dark mode support: @media (prefers-color-scheme: dark) or toggle
+- Smooth transitions: 0.3s ease for all interactive elements
+- Touch-friendly: min 44px touch targets, readable contrast
+- No external CSS frameworks
+
+JAVASCRIPT SPECIFICATIONS:
+- Single app object pattern: const SpotAI = { init(), showSection(), quiz{}, etc. }
+- Section navigation: Hide all sections, show target (SPA feel)
+- Quiz engine: Array of question objects, render function, answer checking
+- localStorage: Save quiz progress, high score, tutorial completion
+- Image lazy loading: Intersection Observer or native loading="lazy"
+- No jQuery, no external JS libraries except Firebase (optional future)
+
+ACCESSIBILITY:
+- Semantic HTML5 (nav, main, section, article, button)
+- ARIA labels where needed
+- Keyboard navigation support (Enter/Space to activate)
+- Alt text for every image describing content AND tell (e.g., "AI-generated image showing hand with seven fingers")
+- Focus indicators visible
+
+PERFORMANCE:
+- Minimize external requests (batch images, use CDNs)
+- CSS and JS in external files (cached) but small enough to be fast
+- No render-blocking resources
+
+═══════════════════════════════════════════════════════════════════
+SAMPLE CONTENT (USE THESE EXACT URLS OR EQUIVALENT)
+═══════════════════════════════════════════════════════════════════
+
+REAL IMAGES (Unsplash/Pexels - CC0):
+1. Portrait: https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80 (man portrait)
+2. Hands: https://images.unsplash.com/photo-1516575334481-f85287c2c81d?w=800&q=80 (hands typing)
+3. Street: https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80 (city street)
+4. Nature: https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&w=800 (mountain lake)
+
+AI IMAGES (Generate or use placeholder URLs - describe tells in alt text):
+1. Bad hands: [Use ImgBB URL with description "AI image of person with 6 fingers on left hand"]
+2. Weird eyes: [Use ImgBB URL with description "AI portrait with mismatched iris colors and blurry left eye"]
+3. Nonsense text: [Use ImgBB URL with description "AI-generated street scene with gibberish store signs"]
+4. Shadow error: [Use ImgBB URL with description "AI image where shadow points opposite to light source"]
+
+For the actual code, use these placeholder services or generate:
+- Perchance AI: https://perchance.org/ai-text-to-image-generator (generate, right-click copy image address)
+- Or use https://via.placeholder.com/800x600/4f46e5/ffffff?text=AI+Example:+Bad+Hands with descriptive alt text
+
+═══════════════════════════════════════════════════════════════════
+FIREBASE INTEGRATION (OPTIONAL PLACEHOLDER)
+═══════════════════════════════════════════════════════════════════
+
+Include commented-out code and instructions for adding Firebase later:
+- CDN script tag: https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js
+- Config placeholder with YOUR_API_KEY comments
+- Auth: Google sign-in button (hidden by default)
+- Firestore: User progress saving (commented)
+- Storage: Image upload for analysis (future feature)
+
+DO NOT implement full Firebase in MVP—just structure for easy addition.
+
+═══════════════════════════════════════════════════════════════════
+CODE QUALITY STANDARDS
+═══════════════════════════════════════════════════════════════════
+
+- Every function JSDoc commented
+- CSS organized: Reset → Variables → Base → Layout → Components → Utilities → Media Queries
+- No console errors in production
+- Mobile-first: Test at 375px, 768px, 1024px breakpoints
+- ES6+ features: const/let, arrow functions, template literals, destructuring
+- Event delegation for dynamic elements
+
+═══════════════════════════════════════════════════════════════════
+DELIVERABLE FORMAT
+═══════════════════════════════════════════════════════════════════
+
+Provide complete, copy-paste ready files:
+
+1. index.html - Complete HTML with all sections, semantic structure, external image URLs
+2. css/style.css - Full stylesheet, mobile-first, dark mode, animations
+3. js/app.js - Complete JavaScript app with navigation, quiz logic, localStorage
+4. .gitignore - Standard web project ignore file
+
+Include inline comments explaining:
+- Where to replace image URLs
+- How to add new quiz questions
+- How to deploy to Vercel/Netlify
+- Firebase integration steps
+
+═══════════════════════════════════════════════════════════════════
+BONUS FEATURES (IF TIME PERMITS)
+═══════════════════════════════════════════════════════════════════
+
+- Confetti animation on quiz completion (CSS or lightweight JS)
+- Share score as text (Web Share API or clipboard)
+- "Daily Challenge" mode (random question from pool)
+- Simple service worker for offline caching
+
+═══════════════════════════════════════════════════════════════════
+FINAL CHECKLIST
+═══════════════════════════════════════════════════════════════════
+
+Before outputting code, verify:
+[ ] Zero external dependencies except Firebase CDN (optional)
+[ ] All images use external URLs with fallbacks
+[ ] Works in SPCK Editor preview without server
+[ ] Single-page navigation smooth and intuitive
+[ ] Quiz fully functional with localStorage
+[ ] Mobile touch targets adequate
+[ ] No build step required
+[ ] Ready for Git init → commit → push → Vercel deploy
+
+Generate the complete, production-ready codebase now. Make it educational, engaging, and immediately deployable. The user should be able to copy files into SPCK Editor, preview instantly, push to GitHub, and have a live site within 10 minutes.
+
+
+
