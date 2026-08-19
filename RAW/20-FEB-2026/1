@@ -1,0 +1,22 @@
+"I am a web developer building a Project Wrap-Up & Feedback form for my clients. I will be hosting this on Netlify, so the form needs to be compatible with Netlify Forms (no PHP/backend required).
+Please generate the HTML (using Tailwind CSS for styling) and a small amount of Vanilla JavaScript for a single-page site with the following features:
+Netlify Integration: Include the data-netlify="true", name, and method="POST" attributes. Add a data-netlify-honeypot="bot-field" for spam protection.
+Personalization Logic: Include a script that checks the URL for a ?client= parameter. If it exists, automatically pre-fill a hidden 'Client Name' field and update a greeting at the top of the page (e.g., 'Hey [Client Name], let’s wrap this up!').
+Modern Form Sections:
+Project Pulse: A 1-5 star rating or a custom radio-button scale for overall satisfaction.
+Feedback: A textarea for 'What was the highlight of working together?' and 'What could be improved?'.
+Testimonial Toggle: A checkbox asking 'Can I use your feedback as a testimonial?'. Use conditional logic (JS) to show a 'Company Name' and 'LinkedIn Profile' field only if they check 'Yes'.
+File Upload: A field to allow clients to upload a headshot or brand logo.
+UX Details:
+Add a 'Loading' state to the submit button once clicked.
+A clean, minimalist design (dark mode compatible or a professional 'SaaS' look).
+A custom success redirect path (action="/success").
+Clean Code: Keep all CSS (Tailwind via CDN is fine) and JS in one file or clearly separated for a quick copy-paste. Use the attached website color themes and scheme
+
+
+
+
+
+
+
+Fix it so that it's ready for production and the "Warning: cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation" does not appear
