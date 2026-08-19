@@ -1,0 +1,35 @@
+Act as a Senior Full-Stack Architect. Build a complete "Dental Clinic Management System" using Vanilla HTML5, CSS3, and JavaScript (ES6+).
+
+Project Requirements & Architecture:
+
+Framework-Free: Use zero frontend frameworks. Pure JS only.
+
+Authentication: Implement Firebase Auth (Email/Password) for an Admin Login.
+
+Database: Use Firebase Firestore to store "appointments" and "clinic_stats".
+
+API Layer: Create a /api/send-confirmation.js Node.js function for Vercel. It should receive booking data via POST and send a confirmation email (use a placeholder for an email service like Resend or SendGrid).
+
+Hosting Config: Provide a vercel.json to handle routing for the API and to ensure clean URLs.
+
+The Build Components:
+
+index.html: Public-facing landing page with a "Book Now" section.
+
+admin.html: A dashboard protected by a Firebase Auth state listener. It must show a table of bookings and a "Confirm" button.
+
+styles.css: Modern, clean medical aesthetic (use CSS Variables for colors like #2a9d8f and #f4f1de).
+
+firebase-config.js: A central file where I can paste my Firebase SDK configuration.
+
+app.js: All frontend logic including Firestore addDoc for bookings and onSnapshot for real-time dashboard updates.
+
+Specific Instructions for the AI:
+
+Ensure the Admin dashboard only shows data if the user is logged in.
+
+The "Book Now" form should trigger the Vercel API function after successfully saving to Firestore.
+
+Provide the complete code for every file in a single response, structured as a professional repository.
+
+Add comments explaining exactly where to insert my Firebase Keys and Vercel Environment Variables.
