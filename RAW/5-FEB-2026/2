@@ -1,0 +1,11 @@
+Edit my website code to remove excessive vertical "dead space" and add a floating WhatsApp button.
+
+Constraints: > 1. Preserve Layout: Do not change the fonts, colors (except for the new button), or the general structure of the existing sections. Keep all current functionality intact. 2. Remove Dead Space: Identify and reduce large margins and paddings between sections (like the gaps between "Service Areas" and "Why Choose Us"). Target section, container, and margin properties to make the layout more compact and professional. 3. Floating WhatsApp Button: Add a fixed-position WhatsApp button in the bottom-right corner of the screen.
+
+It should use the WhatsApp green color (#25D366).
+
+It should stay in place as the user scrolls.
+
+Link it to the number: 0693561527.
+
+Use a z-index to ensure it stays on top of other elements.
