@@ -1,0 +1,26 @@
+Act as an expert Senior Web Developer. Build a professional, modern educational website for "Level Up Education," a training center based in Hatfield, Pretoria. 
+
+The site must be a single-page application (or a modular HTML/JS setup) using HTML5, Tailwind CSS (via CDN), and Vanilla JavaScript. 
+
+### Core Requirements:
+1. **Design Aesthetic:** Professional, trustworthy, and high-conversion. Use a color palette of Deep Navy, White, and an Action Orange for CTAs.
+2. **Dynamic Certificate Pages:** - Create a system where each certificate (Matric, Security, Nated N1-N6, National Diploma, Driving Licence, and various Trade Tests) has its own modal or dynamic section.
+   - Content for each: "Why Choose This Certificate" (Benefits), "Career Pathways" (Future growth), and a price tag.
+3. **Course Data & Pricing:** - Matric Certificate: R1600
+   - Security Certificate: R3000
+   - National Diploma: R2000
+   - Driving Licence: R3700
+   - Trade Tests (Electrical, Diesel Mechanic, Plumbing, etc.): R4000
+4. **Lead Generation (Netlify Forms):**
+   - Every "Inquiry" button should scroll to or open a contact form.
+   - The form MUST include: Name, Email, WhatsApp Number, and a Dropdown to select the specific course.
+   - Add the 'data-netlify="true"' attribute to the form for backend-less submission.
+5. **WhatsApp Integration:** - Include a floating WhatsApp button linked to +27686961636.
+   - Pre-fill the message with: "Hi Level Up Education, I'm interested in the [Course Name]..."
+6. **Footer/Location:** - Display the address: 256 Glyn Ln, Hatfield, Pretoria, 0002.
+   - Include a placeholder for a Google Maps iframe.
+
+### Deliverables:
+- A single `index.html` containing the structure and Tailwind classes.
+- A `script.js` to handle dynamic modal content and WhatsApp message generation.
+- Responsive CSS for mobile-first viewing (critical for South African users).
