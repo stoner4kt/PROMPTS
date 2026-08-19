@@ -1,0 +1,75 @@
+> **System Role:** You are a Senior Principal Engineer at a top AI Consultancy. Your expertise is in rapid prototyping of scalable, integrated AI solutions.
+> **Project Goal:** Build a production-ready MVP for an **AI-Powered Customer Support Hub** dashboard.
+> **Core Value Proposition (for clients):** Reduces support costs by up to 40% using AI-driven automation (triage, summarization, draft generation).
+> **Tech Stack (Crucial):**
+> 1. **Frontend:** Single-Page Application (SPA) using HTML5, Tailwind CSS (loaded via CDN), and modern Vanilla JavaScript (ES6+).
+> 2. **AI Engine:** Direct API integration with **Botpress Cloud** (chat.botpress.cloud API).
+> 3. **Deployment:** Optimized for Vercel.
+> 
+> 
+> **Architecture Requirements:**
+> * The UI handles displaying tickets and managing the workflow.
+> * Botpress handles the Knowledge Base (grounding data), Natural Language Processing (NLP), and response generation.
+> * The UI calls the Botpress API to send ticket text and receive a "Draft Answer."
+> 
+> 
+> **Detailed Feature Requirements:**
+> **1. Modern Dashboard UI (Dark Mode "SaaS" Aesthetic)**
+> * **Layout:** Fixed sidebar with Lucide Icons (Dashboard, Inbox, Knowledge, Analytics).
+> * **Styling:** Use Tailwind CSS. Modern, clean, rounded corners, "glassmorphism" card effects. Deep blues and greys.
+> 
+> 
+> **2. The Ticket Triage System (Inbox View)**
+> * Display a dynamic list of 5 simulated "New Tickets" (create mock JSON data with unique issues like billing, technical, and shipping).
+> * **Auto-Triage:** Include a JS function that automatically applies "Category" and "Sentiment" (Happy, Neutral, Angry) tags to these mock tickets based on keywords.
+> 
+> 
+> **3. The AI Copilot Interface (Work View)**
+> * When a ticket is selected from the list, open a workspace panel.
+> * Show the customer’s original query.
+> * **The "Draft Reply" Section:** This must contain:
+> * A textarea (editable) for the AI draft.
+> * A button labeled "✨ Generate AI Draft."
+> * **CRUCIAL JS LOGIC:** This button must make a POST request to the Botpress Cloud Chat API (`https://chat.botpress.cloud/v1/chat/messages`) using configured `x-bot-id` and `Authorization` headers. The request sends the customer’s query, and the textarea must populate with the Botpress response.
+> 
+> 
+> 
+> 
+> **4. PII Data Masking (Security Feature)**
+> * Implement a JavaScript function that scrubs Personally Identifiable Information (email addresses, phone numbers, credit card patterns) from the ticket text *before* it is sent to the Botpress API. Display a notification "Data masked for privacy" when this happens.
+> 
+> 
+> **5. The ROI Calculator Widget**
+> * Add a card to the dashboard that tracks: "Tickets Handled by AI" (counter) and "Total Est. Savings" (Calculated at $12.00 saved per ticket).
+> 
+> 
+> **Output Deliverables:**
+> 1. A clean, componentized JavaScript codebase (e.g., separate logic for API calls, UI rendering, and PII masking).
+> 2. A configuration structure ready for **Vercel Environment Variables** (use placeholders like `window.ENV_BOT_ID || 'DEMO_ID'`).
+> 3. The complete, stylized single HTML file.
+> 
+> 
+
+---
+
+### 🛠️ What to do immediately after the AI generates the code:
+
+1. **If using Replit:** Create an `index.html` file and paste the output. Replit will automatically host the dev version for you.
+2. **Add your Botpress Credentials:**
+* Find where the code defines the Botpress headers. It will look like this:
+```javascript
+const headers = {
+  'Authorization': 'Bearer YOUR_ACTUAL_TOKEN_HERE',
+  'x-bot-id': 'YOUR_ACTUAL_BOT_ID_HERE',
+  'Content-Type': 'application/json'
+};
+
+```
+
+
+* Replace the placeholders with your actual **Personal Access Token** and **Bot ID** from the Botpress dashboard.
+* *Note: For the best portfolio presentation, you should eventually move these to Vercel Environment Variables so they aren't exposed in public source code.*
+
+
+
+This setup allows you to show clients a **functional** tool, not just a static design mockup.
