@@ -39,6 +39,16 @@ with follow-up prompts within a thread separated by `---`.
 `MARKETING/` and `GENERAL/` are new directories created to accommodate growth
 in the agency's web-development and marketing services.
 
+## Templates
+
+`TEMPLATES/` holds standardized, parameterized prompt *templates* (distinct from
+the verbatim extracted prompts above). Replace the bracketed variables
+(e.g., `[CLIENT_NAME]`) before use.
+
+| File | Purpose |
+| --- | --- |
+| `TEMPLATES/reusable-ai-prompt-templates.md` | Content & copywriting strategy, technical SEO & asset map, and data-analysis action-matrix templates |
+
 ## File format
 
 Each `.md` file contains:
