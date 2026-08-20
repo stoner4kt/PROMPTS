@@ -1,0 +1,7 @@
+# I want to add this index
+
+I want to add this index.html vehicle damages and expenses to the current system without breaking the functionality but ensuring it operates together with the current system. 1 Admins should be able to approve/ reject  expense/ damages submits before they are logged like with the driver recon sheet edits,use edge function for this. Ensure this is corresponding to the real data , each expense should be tied to a vehicle in the fleet ,only allowing vehicles in the fleet are displayed. Generate me a prompt I can feed into codex to implement these necessary changes without changing anything else in the system.
+
+---
+
+Drivers shouldnt see this dashboard, only admins.Drivers should be able to log damages and expenses with images/document uploads, it should sends alert to a specific admin for approval, admin then needs to enter a OTP sent to them into a field on the system for that specific expenses/damage to approve it,the driver gets notified if it is approved or rejected. Admins should also be able to log expenses/ damages.And it should only be able to log for vehicles in the database, select, not enter a name field. The documents/image uploads will be stored in cloudinary but should be viewable/ downloadable when admins view it/ download it , ensuring that the documents/ images uploaded are viewable when admins view/download it. Generate me the new prompt I can feed into codex to implement these necessary changes without changing anything else in the system .

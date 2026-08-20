@@ -1,0 +1,3 @@
+# I am doing well
+
+I am doing well. I  have opened a small Airport Transfers and Tours company. Generate me a prompt i can feed into lovable, replit, claude to generate me a website for this business the attached images are the logo and some business information. Ensure that the site is generated in html, javascript, css. Give it smooth transitions and animations. Ensure that the site isn optimized for all screens and devices asell as broswers , also add GSC and G4A tags where necessary. The designs should be proffesional and AAA grade. This websites is the designs i am looking at https://ccshuttles.co.za
