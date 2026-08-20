@@ -1,0 +1,3 @@
+# I want to create a dedicated /services/ landing page for each current
+
+I want to create a dedicated  /services/  landing page for each current service and add the service Gas fireplace aswell, with individual SEO-optimise titles, descriptions and schema - significantly boosting keyword ranking for high - intent searches, updates the sitemap.xml and robots.txt and llms.txt accordingly. Ensure that the site is targeted at customers in Cape Town Areas as stated on the current website, also include a Google maps embed of Cape Town on Every Service page. Analyze the website and provide me with a prompt i can feed into codex /replit to make the necessary changes to maximize traffic and leads for the business to see max ROI

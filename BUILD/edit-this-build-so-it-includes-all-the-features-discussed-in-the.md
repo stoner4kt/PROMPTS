@@ -1,0 +1,3 @@
+# Edit this build so it includes all the features discussed in the
+
+Edit this build so it includes all the features discussed in the docx. Keep the build in html, css, js. Generate me this complete build using html, css, js only with setup guide and all scripts and files I need to luanch this system, I'm using Cloudflare for hosting and supabase as a backend. Include all the features discussed in the document. Provide a step by step setup guide on how to setup everything and where to get credentials and where to set them aswell. Ensure that the login page can easily direct user to the necessary dashboard based on thier role. Also include a setup guide on how to add users and edit their roles once the system is live

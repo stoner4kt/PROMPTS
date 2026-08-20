@@ -1,0 +1,3 @@
+# I want to make these changes to the current system without breaking
+
+I want to make these changes to the current system without breaking the functionality of the current system only changing what is needed [Bookings form should have a field at the bottom to upload documents on the admin side. Drivers should be able to view this pdf, and download it if the booking is assigned to them. Use cloudinary to store the docs. Create a table where admins can see all the past bookings and view it, download it aswell]. Generate me a prompt I can feed into codex to make these necessary changes to the current system without breaking the current build
