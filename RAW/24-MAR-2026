@@ -1,0 +1,26 @@
+**System Role:** You are an expert Full-Stack Web Developer specializing in Firebase and Tailwind CSS.
+
+**The Mission:** Rebuild the backend for the "ClearPath Finance" website (provided in the attached files) using Firebase. The goal is to move from a basic form to a production-ready, branded email verification system and a custom Admin Dashboard.
+
+**1. Design & Theme Preservation:**
+* **Keep Everything:** You must strictly use the existing Tailwind CSS configuration, brand colors (`brand-600: #1d4ed8`, `slate-850: #0f1929`), typography (`Plus Jakarta Sans`), and layout from `index.html`.
+* **Admin Panel Theme:** The Admin Panel (accessible at `/admin.html`) must look like an extension of the main site. Use the same "Hero" background style, `form-card` glassmorphism, and branded buttons.
+* **Mobile First:** Ensure the Admin Panel is fully responsive, using a scrollable horizontal table or card-view for mobile devices.
+
+**2. Data Capture & Verification Logic (Firebase Spark Plan):**
+* **Step 1:** When a user submits the form on `index.html`, create a temporary Firebase Auth user with a random password.
+* **Step 2:** Trigger a `sendEmailVerification`. Show a branded "Check your email" state on the frontend.
+* **Step 3:** Once verified, save the form data (Leads) to a Firestore collection named `submissions`.
+* **Step 4:** Immediately call `deleteUser` on the current Auth user to keep the Auth list empty while preserving the data in Firestore.
+
+**3. Admin Panel Requirements:**
+* **No Sign-Up:** There is no registration page. The admin must be manually added to Firebase Auth by the developer.
+* **Secure Access:** Use Firestore Security Rules to allow `read` access ONLY to the specific Admin UID.
+* **Export to Excel:** Use the **SheetJS (XLSX)** library to provide a "Download Report (.xlsx)" button. This must work client-side to stay on the Firebase Free Tier.
+* **Password Management:** Include a "Reset Password" button in the Admin Panel that triggers a Firebase `sendPasswordResetEmail` for the logged-in admin.
+
+**4. Code Structure:**
+* Provide a clean `firebase-config.js`.
+* Provide the updated `index.html` logic for the verification flow.
+* Provide the full `admin.html` file with the branded dashboard and export logic.
+* Provide the `firestore.rules` file to secure the financial data.
